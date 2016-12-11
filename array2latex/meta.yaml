@@ -1,0 +1,61 @@
+package:
+  name: array2latex
+  version: "0.3"
+
+source:
+  fn: array2latex-0.3.tar.gz
+  url: https://pypi.python.org/packages/1e/e7/7b286cf25e75db8e6b2c60211940f667077912d9c7f1d8f119ff0eca54e5/array2latex-0.3.tar.gz
+  md5: 594502b1b88cc8875f740402bb0db110
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - array2latex = array2latex:main
+    #
+    # Would create an entry point called array2latex that calls array2latex.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+# test:
+  # Python imports
+  # imports:
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/adonese/arraytolatex
+  license: MIT
+  summary: 'A tool to convert array into latex tables'
+  license_family: MIT
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

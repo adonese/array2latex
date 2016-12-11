@@ -1,0 +1,6 @@
+README.rst
+setup.py
+array2latex.egg-info/PKG-INFO
+array2latex.egg-info/SOURCES.txt
+array2latex.egg-info/dependency_links.txt
+array2latex.egg-info/top_level.txt
