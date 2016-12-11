@@ -8,14 +8,14 @@ In my thesis, I used `Tables Generator<https://www.tablesgenerator.com>`_ which 
 Uses
 ----
 
-First you need to install it via pip using
-```
-pip install array2latex
-```
-Or using Anaconda, both work just fine, and they will always have the same lates version
-```
-conda install array2latex
-```
+First you need to install it via pip using::
+
+	pip install array2latex
+
+Or using Anaconda, both work just fine, and they will always have the same lates version::
+
+	conda install array2latex
+
 
 
 TODO:
