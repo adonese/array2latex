@@ -33,6 +33,7 @@ def tolatex(array, header, caption="My table", label="table_something", output_f
     length_table_items = max(len(str(i)) for i in string_table_items)
     
     template = """\\begin{table}[]
+      \\\\make sure that you have add booktabs package by adding \\usepackage{booktabs}
       \\caption{%s}
       \\label{%s}
       \\begin{tabular}{@{%s}@{}}

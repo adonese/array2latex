@@ -17,6 +17,7 @@ Or using Anaconda, both work just fine, and they will always have the same lates
 	conda install -c adonese array2latex
 
 Starting `array2latex` is very simple. It is meant to be integrated with your workflow e.g., working with numpy array and output the final result into `LaTeX` table::
+
 	from array2latex import tolatex
 	import numpy as np
 	# Assuming that you have done some cool stuffs with `NumPy`, you have
@@ -27,11 +28,13 @@ Starting `array2latex` is very simple. It is meant to be integrated with your wo
 	# And thats it! You now have a valid LaTeX table.
 
 But there are even more to add. `array2latex` only have 2 required argumets, the array you want to convert (obviously), and the header of your table. You can also sepecify a `caption` of you table, and you can also add a `label` as you would normally do in a typical table in LaTeX. To do that is very simple actually, you just need to do::
+
 	# Assuming you have imported all the necessary packages, and done you cool stuffs with numpy
 	array = np.random.rand(3, 4) # Create 3,4 random matrix
 	table = tolatex(array, header=["col1", "col2", "col3", "col4"], caption="My cool table", label="table:cool-table")
 
 In the previous examples the output will be the stdout, i.e., your `jupyter notebook` or your terminal. However, we also allow you to store the results in a file. To do that::
+
 	# Assuming you have imported all the necessary packages, and done you cool stuffs with numpy
 	array = np.random.rand(3, 4) # Create 3,4 random matrix
 	table = tolatex(array, header=["col1", "col2", "col3", "col4"], caption="My cool table", label="table:cool-table", output_file="somefile.txt") # The extenstion of the file doesn't really matter. It's just a txt file anyway.
