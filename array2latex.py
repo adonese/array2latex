@@ -9,10 +9,12 @@ import numpy as np
 import pandas
 import csv
 import re
+
 def get_type(data):
     return type(data)
 
-def tolatex(array, header, centring="centring", caption="My table", label="table_something", output_file=False):
+
+def tolatex(array, header, caption="My table", label="table_something", output_file=False):
     """
     This function converts numpy ndarray into a valid latex table.
     """
@@ -31,12 +33,11 @@ def tolatex(array, header, centring="centring", caption="My table", label="table
     length_table_items = max(len(str(i)) for i in string_table_items)
     
     template = """\\begin{table}[]
-      \\%s
       \\caption{%s}
       \\label{%s}
       \\begin{tabular}{@{%s}@{}}
       \\toprule
-    """ % (centring, caption, label, len(header) * "l")
+    """ % (caption, label, len(header) * "l")
     length_header_items = max(len(i) for i in header)
     padding = " " * (max(length_table_items, length_header_items) // 2 - 2) + "&" + " " * (max(length_table_items, length_header_items) // 2 - 2)
     midrule = "  " + padding.join(header) + r"\\" + "\n" + " "* (max(length_table_items, length_header_items) // 2 + 2) + "\midrule" + "\n"
@@ -49,5 +50,11 @@ def tolatex(array, header, centring="centring", caption="My table", label="table
         string_array = re.sub(regex_repl[0], regex_repl[1], string_array.rstrip())
         
     string_array = string_array + "\\\\\n" + "    \\bottomrule" + "\n" + "    \\end{tabular}" + "\n" + "\\end{table}"
-            
-    return template + string_array
+    
+    if output_file:
+        curdir = os.path.abspath(os.path.dirname(__file__))
+        with open(os.path.join(curdir, output_file), 'w') as f:
+            f.writelines(template + string_array)
+    else:
+        return template + string_array
+        
