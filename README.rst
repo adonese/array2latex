@@ -1,4 +1,4 @@
-Array2latex
+array2latex
 ============
 
 It converts NumPy's arrays into valid LaTeX tables. I use NumPy a lot, and it is always the case that I wanted to convert some array to latex. I wanted something that `imported' in my jupyter notebook such that when I get my results I will directly convert them into LaTeX table (as oppose of converting them into a csv file, and then convert that into LaTeX using other service)
