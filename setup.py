@@ -7,7 +7,7 @@ with open(os.path.join(curdir, "README.rst"), 'r') as readme:
 
 setup(
 	name = "array2latex",
-	version = "0.3",
+	version = "0.4",
 	description = "A tool to convert array into latex tables",
 	long_description = long_description,
 	url = "https://github.com/adonese/arraytolatex",
