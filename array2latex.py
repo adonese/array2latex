@@ -10,6 +10,9 @@ import pandas
 import csv
 import re
 
+__version__ = "0.1"
+
+
 def get_type(data):
     return type(data)
 
