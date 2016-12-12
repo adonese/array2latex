@@ -3,7 +3,7 @@ array2latex
 
 It converts NumPy's arrays into valid LaTeX tables. I use NumPy a lot, and it is always the case that I wanted to convert some array to latex. I wanted something that `imported' in my jupyter notebook such that when I get my results I will directly convert them into LaTeX table (as oppose of converting them into a csv file, and then convert that into LaTeX using other service)
 
-In my thesis, I used `Tables Generator<https://www.tablesgenerator.com>`_ which is really cool and very awesome. But it is not what I wanted, the step of converting into csv, and then uploading to the website was just not the very best way to do that.
+In my thesis, I used `Tables Generator <https://www.tablesgenerator.com>`_ which is really cool and very awesome. But it is not what I wanted, the step of converting into csv, and then uploading to the website was just not the very best way to do that.
 
 Uses
 ----
@@ -19,6 +19,9 @@ Or using Anaconda, both work just fine, and they will always have the same lates
 .. code-block:: python
 
 	conda install -c adonese array2latex
+
+For more informations about the development versions of `array2latex` you can go to the `release <https://github.com/adonese/array2latex/releases>`_ page.
+
 
 Starting `array2latex` is very simple. It is meant to be integrated with your workflow e.g., working with numpy array and output the final result into `LaTeX` table
 
